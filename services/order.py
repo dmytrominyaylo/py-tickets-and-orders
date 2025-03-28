@@ -23,7 +23,7 @@ def create_order(
             )
 
 
-def get_orders(username: str = None) -> QuerySet[Order] | Order:
+def get_orders(username: str = None) -> QuerySet[Order]:
     if username:
         return Order.objects.filter(user__username=username)
     return Order.objects.all()

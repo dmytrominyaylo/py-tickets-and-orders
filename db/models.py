@@ -66,7 +66,7 @@ class Order(models.Model):
         ordering = ["-created_at"]
 
     def __str__(self) -> str:
-        return f"{self.created_at.strftime("%Y-%m-%d %H:%M:%S")}"
+        return f"{self.created_at.strftime(r"%Y-%m-%d %H:%M:%S")}"
 
 
 class Ticket(models.Model):
